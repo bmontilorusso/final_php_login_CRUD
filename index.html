@@ -3,9 +3,71 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+
+    <title>Trabajo Final PHP - Monti & Reale</title>
+
+    <!-- Enlaces internos -->
+    <!--Reservado para el Favicon -->
+    <link rel="preload" href="../final_php_login_CRUD/css/styles.css" as="style">
+    <link rel="stylesheet" href="../final_php_login_CRUD/css/normalize.css" as="style">
+    <link rel="stylesheet" href="../final_php_login_CRUD/css/styles.css" as="style">
+
+    <!-- Enlaces externos -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    
 </head>
+
 <body>
+    <!-- Formulario de inicio se Sesión (LogIn) -->
+    <form class="form form-login" action="../final_php_login_CRUD/php/login.php" method="POST">
+        <h2>Comencemos!</h2>
+
+        <label class="labels" for="">Usuario</label>
+        <input class="inputs" type="text" placeholder="Ingrese su Usuario" name="usuario" autocomplete="off" required>
+
+        <label class="labels" for="">Contraseña</label>
+        <input class="inputs" type="password" placeholder="Ingrese su Contraseña" name="pass" autocomplete="off" required>
+        
+        <button class="button" type="submit">Iniciar sesión</button>
+
+    </form> <!-- Fin del Formulario de LogIn -->
+
+    <!-- Formulario de Creación de Usuario -->
+    <form class="form form-altaUsuario" action="../final_php_login_CRUD/php/alta_usuario.php" method="POST">
+        <h2>Comecemos</h2>
+        
+        <h3>Ingrese sus datos para generar el alta de usuario:</h3>
+
+        <label class="labels" for="">Nombre</label>
+        <input class="inputs" type="text" placeholder="Ingrese su Nombre" name="nombre" autocomplete="off" required>
+
+        <label class="labels" for="">Apellido</label>
+        <input class="inputs" type="text" placeholder="ingrese su apellido" name="apellido" autocomplete="off" required>
+
+        <label class="labels" for="">Mail</label>
+        <input class="inputs" type="email" placeholder="ingrese su mail" name="mail" autocomplete="off" required>
+
+        <label class="labels" for="">Usuario</label>
+        <input class="inputs" type="text" placeholder="Ingrese un Usuario que le guste" name="nuevoUsuario" autocomplete="off" required>
+
+        <label class="labels" for="">Contraseña</label>
+        <input class="inputs" type="password" placeholder="Ingrese una Contraseña" name="nuevaPass" autocomplete="off" required>
+
+        <button class="button" type="submit">Crear Usuario!</button>
+
+    </form>
+
+    <!-- Link para CREAR USUARIO -->
+    <p>Si aún no cuenta con usuario, puede crear uno <span>aquí</span></p>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>Trabajo Práctico Final de PHP, 2025. Monti Bruno & Reale Aldana</p>
+    </footer>
+
+
     
 </body>
 </html>
