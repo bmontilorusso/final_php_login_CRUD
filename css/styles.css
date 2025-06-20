@@ -1,5 +1,7 @@
 /* Trabajo FINAL PHP - Monti Bruno & Reale Aldana */
 
+/* Globales */
+
 /* Reservado para root */
 
 /* Reservado para html */
@@ -8,3 +10,7 @@ body {
     font-family: 'Urbanist', sans-serif;
 }
 
+.lateral-derecho {
+    background-image: url(../../final_php_login_CRUD/img/Fondo_login.png);
+    
+}
