@@ -45,12 +45,12 @@
                 <button class="boton" type="submit">Iniciar sesión</button>
 
                 <!-- Link para CREAR USUARIO -->
-                <p>Si aún no cuenta con usuario, puede crear uno <span class="aqui">aquí</span></p>
+                <p>Si aún no cuenta con usuario, puede crear uno <span id="aqui" class="aqui">aquí</span></p>
 
             </form> <!-- Fin del Formulario de LogIn -->
 
             <!-- Formulario de Creación de Usuario -->
-            <form class="form form-altaUsuario" action="php/alta_usuario.php" method="POST">
+            <form id="formAltaUsuario" class="form form-altaUsuario" action="php/alta_usuario.php" method="POST">
                 <h2>Comecemos</h2>
                 
                 <h3>Ingrese sus datos para generar el alta de usuario:</h3>
@@ -72,6 +72,9 @@
 
                 <button class="button" type="submit">Crear Usuario!</button>
 
+                <!-- Link para INICIAR SESIÓN -->
+                <p>Si ya cuenta con un usuario, inicie sesión <span id="volver" class="aqui">aquí</span></p>
+
             </form> <!-- Fin del Formulario de Creación de usuario -->            
 
         </div>
@@ -87,6 +90,6 @@
     </div>
 
     <!-- Script de JS: -->
-     <script src="/js/script.js"></script>
+     <script src="js/script.js"></script>
 </body>
 </html>
