@@ -20,64 +20,69 @@
 </head>
 
 <body>
-    <!-- Contenido Lateral Izquierdo (Formularios + Footer DED) -->
-    <div class="lateral-izquierdo">
+    <!-- Contenedor del Sitio, íntegramente -->
+    <div class="contenedor-sitio">
+        
+        <!-- Contenido Lateral Izquierdo (Formularios + Footer DED) -->
+        <div class="lateral-izquierdo">
 
-        <a href="index.html">
-            <img src="img/Logo.png" alt="Logo">
-        </a>
-        <h2>Comencemos!</h2>
+            <a href="index.html">
+                <img class="logo" src="img/Logo.png" alt="Logo">
+            </a>
+            <h2>Comencemos</h2>
 
-        <!-- Formulario de inicio se Sesión (LogIn) -->
-        <form class="form form-login" action="php/login.php" method="POST">            
+            <!-- Formulario de inicio se Sesión (LogIn) -->
+            <form class="form form-login" action="php/login.php" method="POST">            
 
-            <label class="labels" for="">Usuario</label>
-            <input class="inputs" type="text" placeholder="Ingrese su Usuario" name="usuario" autocomplete="off" required>
+                <label class="labels" for="">Usuario</label>
+                <input class="inputs" type="text" placeholder="Ingrese su Usuario" name="usuario" autocomplete="off" required>
 
-            <label class="labels" for="">Contraseña</label>
-            <input class="inputs" type="password" placeholder="Ingrese su Contraseña" name="pass" autocomplete="off" required>
-            
-            <button class="button" type="submit">Iniciar sesión</button>
+                <label class="labels" for="">Contraseña</label>
+                <input class="inputs" type="password" placeholder="Ingrese su Contraseña" name="pass" autocomplete="off" required>
+                
+                <button class="boton" type="submit">Iniciar sesión</button>
 
-        </form> <!-- Fin del Formulario de LogIn -->
+            </form> <!-- Fin del Formulario de LogIn -->
 
-        <!-- Formulario de Creación de Usuario -->
-        <form class="form form-altaUsuario" action="php/alta_usuario.php" method="POST">
-            <h2>Comecemos</h2>
-            
-            <h3>Ingrese sus datos para generar el alta de usuario:</h3>
+            <!-- Formulario de Creación de Usuario -->
+            <form class="form form-altaUsuario" action="php/alta_usuario.php" method="POST">
+                <h2>Comecemos</h2>
+                
+                <h3>Ingrese sus datos para generar el alta de usuario:</h3>
 
-            <label class="labels" for="">Nombre</label>
-            <input class="inputs" type="text" placeholder="Ingrese su Nombre" name="nombre" autocomplete="off" required>
+                <label class="labels" for="">Nombre</label>
+                <input class="inputs" type="text" placeholder="Ingrese su Nombre" name="nombre" autocomplete="off" required>
 
-            <label class="labels" for="">Apellido</label>
-            <input class="inputs" type="text" placeholder="ingrese su apellido" name="apellido" autocomplete="off" required>
+                <label class="labels" for="">Apellido</label>
+                <input class="inputs" type="text" placeholder="ingrese su apellido" name="apellido" autocomplete="off" required>
 
-            <label class="labels" for="">Mail</label>
-            <input class="inputs" type="email" placeholder="ingrese su mail" name="mail" autocomplete="off" required>
+                <label class="labels" for="">Mail</label>
+                <input class="inputs" type="email" placeholder="ingrese su mail" name="mail" autocomplete="off" required>
 
-            <label class="labels" for="">Usuario</label>
-            <input class="inputs" type="text" placeholder="Ingrese un Usuario que le guste" name="nuevoUsuario" autocomplete="off" required>
+                <label class="labels" for="">Usuario</label>
+                <input class="inputs" type="text" placeholder="Ingrese un Usuario que le guste" name="nuevoUsuario" autocomplete="off" required>
 
-            <label class="labels" for="">Contraseña</label>
-            <input class="inputs" type="password" placeholder="Ingrese una Contraseña" name="nuevaPass" autocomplete="off" required>
+                <label class="labels" for="">Contraseña</label>
+                <input class="inputs" type="password" placeholder="Ingrese una Contraseña" name="nuevaPass" autocomplete="off" required>
 
-            <button class="button" type="submit">Crear Usuario!</button>
+                <button class="button" type="submit">Crear Usuario!</button>
 
-        </form> <!-- Fin del Formulario de Creación de usuario -->
+            </form> <!-- Fin del Formulario de Creación de usuario -->
 
-        <!-- Link para CREAR USUARIO -->
-        <p>Si aún no cuenta con usuario, puede crear uno <span>aquí</span></p>
+            <!-- Link para CREAR USUARIO -->
+            <p>Si aún no cuenta con usuario, puede crear uno <span class="aqui">aquí</span></p>
+
+        </div>
+
+        <!-- Contenido Lateral Derecho (imagen + Footer IZQ) -->
+        <div class="lateral-derecho">
+            <!-- Footer -->
+            <footer class="footer">
+                <p>Trabajo Práctico Final de PHP, 2025. Monti Bruno & Reale Aldana</p>
+            </footer>
+        </div>
 
     </div>
 
-    <!-- Contenido Lateral Derecho (imagen + Footer IZQ) -->
-    <div class="lateral-derecho">
-        <!-- Footer -->
-        <footer class="footer">
-            <p>Trabajo Práctico Final de PHP, 2025. Monti Bruno & Reale Aldana</p>
-        </footer>
-    </div>
-    
 </body>
 </html>

@@ -1,16 +1,119 @@
 /* Trabajo FINAL PHP - Monti Bruno & Reale Aldana */
 
-/* Globales */
+/* GLOBALES */
 
-/* Reservado para root */
+:root {
+    /* Paleta de colores */
+    --beigePrincipal: #F5F5F5; /* Fondo */
+    --grisClaro: #FFFFFF; /* Para las tarjetas o cajas */
+    --azulPetroleo: #2C3E50; /* Botones & Headers */
+    --verdeOliva: #A3B18A; /* Hover Íconos */
+    --alertasVerde: #73A580;
+    --alertasRojo: #E76F51;
+    --azulOscuro: #1E1E1E; /* Texto */
+    /* Tipografías */
+    --tipografiaPrincipal: 'Urbanist', sans-serif;
+}
 
-/* Reservado para html */
+/* ESTANDARIZACIONES */
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+    background-color: var(--beigePrincipal);
+}
+
+h1, h2, p {
+    color: var(--azulOscuro);
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
 
 body {
-    font-family: 'Urbanist', sans-serif;
+    font-size: 16px;
+    font-family: var(--tipografiaPrincipal);
+    height: 100vh;    
+}
+
+/* ESTILOS */
+
+/* index.html */
+
+.contenedor-sitio {
+    display: flex;
+    height: 100%;
+}
+
+.logo {
+    width: 30rem;
+}
+
+.lateral-izquierdo {
+    display: flex;
+    flex-direction: column;
+    width: 75rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.form-login {
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.labels, .inputs {
+    width: 20rem;
+    color: var(--azulOscuro);
+    padding: 1rem;
+}
+
+.boton {
+    padding: 1rem;
+    background-color: var(--azulPetroleo);
+    color: var(--beigePrincipal);
+    margin-top: 5rem;    
+}
+
+.boton:hover {
+    cursor: pointer;
+}
+
+.aqui {
+    cursor: pointer;
+    text-decoration: underline;
 }
 
 .lateral-derecho {
+    width: 100%;
     background-image: url(../../final_php_login_CRUD/img/Fondo_login.png);
-    
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
 }
+
+.footer {
+    margin-bottom: 1rem;
+    color: var(--azulOscuro);
+}
+
+
+
+
+
+/* Provisorio: */
+
+.form-altaUsuario {
+    display: none;
+}
+
