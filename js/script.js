@@ -1,20 +1,25 @@
 // Trabajo FINAL PHP - Monti Bruno & Reale Aldana 
 
-// CAMBIO DE FORMULARIO (Login - AltaUsuario):
+// MOSTRAR/OCLUTAR FORMULARIOS (Login - AltaUsuario):
 
-var mostrarAltaUsuario = document.getElementById('aqui');
-var mostrarLogIn = document.getElementById('volver');
-var formAltaUsuario = document.getElementById('formAltaUsuario');
-var formLogIn = document.getElementById('formLogin');
+    var mostrarAltaUsuario = document.getElementById('aqui');
+    var mostrarLogIn = document.getElementById('volver');
+    var formAltaUsuario = document.getElementById('formAltaUsuario');
+    var formLogIn = document.getElementById('formLogin');
 
+    mostrarAltaUsuario.addEventListener('click', function() {
+        formLogIn.classList.add('oculto');
+        formLogIn.classList.remove('visible');
+        formAltaUsuario.classList.add('visible');
+        formAltaUsuario.classList.remove('oculto');
+    });
 
-mostrarAltaUsuario.addEventListener('click', function() {
-    formLogIn.style.display = 'none';
-    formAltaUsuario.style.display = 'flex';
-});
+    mostrarLogIn.addEventListener('click', function() {
+        formLogIn.classList.add('visible');
+        formLogIn.classList.remove('oculto');
+        formAltaUsuario.classList.add('oculto');
+        formAltaUsuario.classList.remove('visible');
+    });
 
+// FIN MOSTRAR/OCULTAR FORMULARIOS.
 
-mostrarLogIn.addEventListener('click', function() {
-    formLogIn.style.display = 'flex';
-    formAltaUsuario.style.display = 'none';
-});

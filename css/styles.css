@@ -54,6 +54,7 @@ body {
 
 .logo {
     width: 30rem;
+    margin: 10rem 0;
 }
 
 h2 {
@@ -68,10 +69,6 @@ h2 {
     align-items: center;
 }
 
-.logo {
-    margin: 10rem 0;
-}
-
 .form-login {
     display: flex;
     flex-direction: column;
@@ -79,6 +76,14 @@ h2 {
     align-items: center;
     justify-content: center;
     
+}
+
+.form-altaUsuario {
+    display: flex;
+    flex-direction: column;
+    width: 55%;
+    align-items: center;
+    justify-content: center;
 }
 
 .labels, .inputs {
@@ -141,12 +146,12 @@ h2 {
     color: var(--azulOscuro);
 }
 
+/* Ocultar / mostrar formularios */
 
+.visible {
+    display: flex;
+}
 
-
-
-/* Provisorio: */
-
-.form-altaUsuario {
+.oculto {
     display: none;
 }

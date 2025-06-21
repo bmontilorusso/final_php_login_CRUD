@@ -31,7 +31,7 @@
             </a>     
 
             <!-- Formulario de inicio se Sesión (LogIn) -->
-            <form id="formLogin" class="form form-login" action="php/login.php" method="POST">
+            <form id="formLogin" class="form form-login visible" action="php/login.php" method="POST">
                 <h2>Comencemos</h2>        
                 <div class="combo-label-input">
                     <label class="labels" for="usuario">Usuario</label>
@@ -50,7 +50,7 @@
             </form> <!-- Fin del Formulario de LogIn -->
 
             <!-- Formulario de Creación de Usuario -->
-            <form id="formAltaUsuario" class="form form-altaUsuario" action="php/alta_usuario.php" method="POST">
+            <form id="formAltaUsuario" class="form form-altaUsuario oculto" action="php/alta_usuario.php" method="POST">
 
                 <h2>Comecemos</h2>
                 
@@ -75,7 +75,7 @@
                     <label class="labels" for="">Usuario</label>
                     <input class="inputs" type="text" placeholder="Ingrese un Usuario que le guste" name="nuevoUsuario" autocomplete="off" required>
                 </div>
-                
+
                 <div class="combo-label-input">
                     <label class="labels" for="">Contraseña</label>
                     <input class="inputs" type="password" placeholder="Ingrese una Contraseña" name="nuevaPass" autocomplete="off" required>
