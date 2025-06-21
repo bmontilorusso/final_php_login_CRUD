@@ -10,11 +10,11 @@ var formLogIn = document.getElementById('formLogin');
 
 mostrarAltaUsuario.addEventListener('click', function() {
     formLogIn.style.display = 'none';
-    formAltaUsuario.style.display = 'block';
+    formAltaUsuario.style.display = 'flex';
 });
 
 
 mostrarLogIn.addEventListener('click', function() {
-    formLogIn.style.display = 'block';
+    formLogIn.style.display = 'flex';
     formAltaUsuario.style.display = 'none';
 });

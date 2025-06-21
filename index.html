@@ -51,33 +51,44 @@
 
             <!-- Formulario de Creación de Usuario -->
             <form id="formAltaUsuario" class="form form-altaUsuario" action="php/alta_usuario.php" method="POST">
+
                 <h2>Comecemos</h2>
                 
                 <h3>Ingrese sus datos para generar el alta de usuario:</h3>
 
-                <label class="labels" for="">Nombre</label>
-                <input class="inputs" type="text" placeholder="Ingrese su Nombre" name="nombre" autocomplete="off" required>
+                <div class="combo-label-input">
+                    <label class="labels" for="">Nombre</label>
+                    <input class="inputs" type="text" placeholder="Ingrese su Nombre" name="nombre" autocomplete="off" required>
+                </div>
 
-                <label class="labels" for="">Apellido</label>
-                <input class="inputs" type="text" placeholder="ingrese su apellido" name="apellido" autocomplete="off" required>
+                <div class="combo-label-input">
+                    <label class="labels" for="">Apellido</label>
+                    <input class="inputs" type="text" placeholder="ingrese su apellido" name="apellido" autocomplete="off" required>
+                </div>
 
-                <label class="labels" for="">Mail</label>
-                <input class="inputs" type="email" placeholder="ingrese su mail" name="mail" autocomplete="off" required>
+                <div class="combo-label-input">
+                    <label class="labels" for="">Mail</label>
+                    <input class="inputs" type="email" placeholder="ingrese su mail" name="mail" autocomplete="off" required>
+                </div>
 
-                <label class="labels" for="">Usuario</label>
-                <input class="inputs" type="text" placeholder="Ingrese un Usuario que le guste" name="nuevoUsuario" autocomplete="off" required>
-
-                <label class="labels" for="">Contraseña</label>
-                <input class="inputs" type="password" placeholder="Ingrese una Contraseña" name="nuevaPass" autocomplete="off" required>
-
-                <button class="button" type="submit">Crear Usuario!</button>
+                <div class="combo-label-input">
+                    <label class="labels" for="">Usuario</label>
+                    <input class="inputs" type="text" placeholder="Ingrese un Usuario que le guste" name="nuevoUsuario" autocomplete="off" required>
+                </div>
+                
+                <div class="combo-label-input">
+                    <label class="labels" for="">Contraseña</label>
+                    <input class="inputs" type="password" placeholder="Ingrese una Contraseña" name="nuevaPass" autocomplete="off" required>
+                </div>
+                
+                <button class="boton" type="submit">Crear Usuario</button>
 
                 <!-- Link para INICIAR SESIÓN -->
                 <p>Si ya cuenta con un usuario, inicie sesión <span id="volver" class="aqui">aquí</span></p>
 
             </form> <!-- Fin del Formulario de Creación de usuario -->            
 
-        </div>
+        </div> <!-- Fin del Lateral Izquierdo -->
 
         <!-- Contenido Lateral Derecho (imagen + Footer IZQ) -->
         <div class="lateral-derecho">
@@ -85,11 +96,11 @@
             <footer class="footer">
                 <p>Trabajo Práctico Final de PHP, 2025. Monti Bruno & Reale Aldana</p>
             </footer>
-        </div>
+        </div> <!-- Fin del Lateral Derecho -->
 
-    </div>
+    </div> <!-- Fin del Contenedor del Sitio -->
 
     <!-- Script de JS: -->
-     <script src="js/script.js"></script>
+    <script src="js/script.js"></script>
 </body>
 </html>

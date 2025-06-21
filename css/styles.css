@@ -48,6 +48,7 @@ body {
 
 .contenedor-sitio {
     display: flex;
+    flex-direction: row;
     height: 100%;
 }
 
@@ -70,6 +71,7 @@ h2 {
 .logo {
     margin: 10rem 0;
 }
+
 .form-login {
     display: flex;
     flex-direction: column;
@@ -148,4 +150,3 @@ h2 {
 .form-altaUsuario {
     display: none;
 }
-
