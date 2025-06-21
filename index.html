@@ -27,20 +27,25 @@
         <div class="lateral-izquierdo">
 
             <a href="index.html">
-                <img class="logo" src="img/Logo.png" alt="Logo">
-            </a>
-            <h2>Comencemos</h2>
+                <img class="logo" src="img/Logo3.png" alt="Logo">
+            </a>     
 
             <!-- Formulario de inicio se Sesión (LogIn) -->
-            <form class="form form-login" action="php/login.php" method="POST">            
+            <form class="form form-login" action="php/login.php" method="POST">
+                <h2>Comencemos</h2>        
+                <div class="combo-label-input">
+                    <label class="labels" for="usuario">Usuario</label>
+                    <input class="inputs" type="text" placeholder="Ingrese su Usuario" name="usuario" autocomplete="off" required>
+                </div>
+                <div class="combo-label-input">
+                    <label class="labels" for="pass">Contraseña</label>
+                    <input class="inputs" type="password" placeholder="Ingrese su Contraseña" name="pass" autocomplete="off" required>
+                </div>
 
-                <label class="labels" for="">Usuario</label>
-                <input class="inputs" type="text" placeholder="Ingrese su Usuario" name="usuario" autocomplete="off" required>
-
-                <label class="labels" for="">Contraseña</label>
-                <input class="inputs" type="password" placeholder="Ingrese su Contraseña" name="pass" autocomplete="off" required>
-                
                 <button class="boton" type="submit">Iniciar sesión</button>
+
+                <!-- Link para CREAR USUARIO -->
+                <p>Si aún no cuenta con usuario, puede crear uno <span class="aqui">aquí</span></p>
 
             </form> <!-- Fin del Formulario de LogIn -->
 
@@ -67,10 +72,7 @@
 
                 <button class="button" type="submit">Crear Usuario!</button>
 
-            </form> <!-- Fin del Formulario de Creación de usuario -->
-
-            <!-- Link para CREAR USUARIO -->
-            <p>Si aún no cuenta con usuario, puede crear uno <span class="aqui">aquí</span></p>
+            </form> <!-- Fin del Formulario de Creación de usuario -->            
 
         </div>
 

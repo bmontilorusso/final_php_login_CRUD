@@ -55,23 +55,49 @@ body {
     width: 30rem;
 }
 
+h2 {
+    font-weight: 400;
+}
+
 .lateral-izquierdo {
     display: flex;
     flex-direction: column;
     width: 75rem;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
 }
 
+.logo {
+    margin: 10rem 0;
+}
 .form-login {
     display: flex;
     flex-direction: column;
+    width: 55%;
+    align-items: center;
+    justify-content: center;
     
 }
 
 .labels, .inputs {
-    width: 20rem;
     color: var(--azulOscuro);
+    width: 100%;      
+}
+
+.combo-label-input {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+}
+
+.labels {
+    padding-top: 1.5rem;
+    width: auto;
+    padding-bottom: .5rem;    
+}
+
+.inputs {
     padding: 1rem;
 }
 
@@ -79,7 +105,13 @@ body {
     padding: 1rem;
     background-color: var(--azulPetroleo);
     color: var(--beigePrincipal);
-    margin-top: 5rem;    
+    margin: 3.5rem 0;
+    width: 50%;
+}
+
+.form-login p {
+    white-space: nowrap;
+    overflow: visible;
 }
 
 .boton:hover {
