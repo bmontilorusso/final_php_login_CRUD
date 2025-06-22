@@ -3,9 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Home</title>
+
+    <!-- Enlaces internos -->
+    <link rel="icon" type="img/png" href="../img/ico/ico_32.png">
+    <link rel="preload" href="../css/styles.css" as="style">
+    <link rel="stylesheet" href="../css/normalize.css" as="style">
+    <link rel="stylesheet" href="../css/styles.css" as="style">
+
+    <!-- Enlaces externos -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 </head>
 <body>
+
+    <h1>Bienvenido</h1>
+
     
 </body>
 </html>

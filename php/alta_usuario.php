@@ -21,7 +21,14 @@ $resultado = mysqli_query($conn, $sql);
 
 // Validación de éxito en creación:
 
-
+if ($resultado) {
+    session_start();
+    $_SESSION['nuevoUsuario'] = $nuevoUsuario;
+    header("Location: home.php");
+    exit();
+} else {
+    echo "Error al hacer alta: " . mysqli_error($conn);
+}
 
 
 
