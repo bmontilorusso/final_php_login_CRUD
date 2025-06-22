@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Home</title>
+
+    <!-- Enlaces internos -->
+    <link rel="icon" type="img/png" href="../img/ico/ico_32.png">
+    <link rel="preload" href="../css/styles.css" as="style">
+    <link rel="stylesheet" href="../css/normalize.css" as="style">
+    <link rel="stylesheet" href="../css/styles.css" as="style">
+
+    <!-- Enlaces externos -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+
+<body class="body">
+
+    <main class="main">
+        <div class="home-lateral-izquirdo">
+            
+            <div class="iconos-home">
+                <img src="../img/btn/new.png" alt="Nuevo_trámite">
+                <p>Nuevo Trámite</p>
+            </div>
+            <div class="iconos-home">
+                <img src="../img/btn/saved.png" alt="Consultar_trámite">
+                <p>Consultar Trámite</p>
+            </div>
+            <div class="iconos-home">
+                <img src="../img/btn/settings.png" alt="Ajustes_cuenta">
+                <p>Ajustes de Cuenta</p>
+            </div>
+        </div>
+
+        <div class="home-lateral-derecho">
+            <!-- Mensaje de Bienvenida! -->
+            <div>
+                <h2 class="bienvenido">Bienvenid@</h2>
+            </div>
+            <!-- Formulario de Nuevo Trámite -->
+            <div class="nuevo-tramite">
+                <form class="nuevo-tramite-form" action="nuevo-tramite.php" method="POST">
+                    <label for="">Nro de Siniestro</label>
+                    <input type="text">
+                    <label for="">Cliente</label>
+                    <input type="text">
+                    <label for="">Vahículo</label>
+                    <input type="text">
+                    <label for="">Dominio</label>
+                    <input type="text">
+                    <label for="">F15</label>
+                    <input type="checkbox">
+                    <label for="">Baja Fiscal</label>
+                    <input type="checkbox">
+                    <label for="">Baja GNC</label>
+                    <input type="checkbox">
+                    <label for="">Jurisdicción</label>
+                    <input type="">
+                    <label for="">Fecha del trámite</label>
+                    <input type="date">
+                    <label for="">Importe</label>
+                    <input type="text">
+                    <label for="">Estado</label>
+                    <input type="text">
+                    <button class="boton">Cargar datos</button>
+
+                </form>
+
+            </div>
+
+            <!-- Mensaje de Consulta de Trámite -->
+            <div class="consultar-tramite">
+                
+            </div>
+
+            <!-- Mensaje de Ajustes de Cuenta -->
+            <div class="ajustes-cuenta">
+                
+            </div>
+        </div>
+
+    </main>
+
+    
+    <!-- Script de JS: -->
+    <script src="../js/script.js"></script>
+</body>
+</html>

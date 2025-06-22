@@ -30,7 +30,4 @@ if ($resultado) {
     echo "Error al hacer alta: " . mysqli_error($conn);
 }
 
-
-
-
 ?>

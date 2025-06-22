@@ -30,6 +30,7 @@ html {
 
 h1, h2, p {
     color: var(--azulOscuro);
+    margin: 0;
 }
 
 *, *:before, *:after {
@@ -44,7 +45,7 @@ body {
 
 /* ESTILOS */
 
-/* index.html */
+/************************** index.html **************************/
 
 .contenedor-sitio {
     display: flex;
@@ -155,3 +156,67 @@ h2 {
 .oculto {
     display: none;
 }
+
+/************************** home.php **************************/
+
+.body {
+    background-image: url(../img/Fondo_home.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.main {
+    width: 120rem;
+    height: 65vh;
+    background-color: var(--grisClaro);
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    border-radius: 5px;
+}
+
+.home-lateral-izquirdo {
+    background-color: var(--beigePrincipal);
+    width: 30%;
+    min-width: 30rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.iconos-home {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.iconos-home img {
+    width: 15rem;
+}
+
+.iconos-home p {
+    text-align: center;
+}
+
+.home-lateral-derecho {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 70%;
+}
+
+.bienvenido {
+    font-size: 30px;
+}
+
+.nuevo-tramite-form {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+

@@ -1,5 +1,6 @@
 // Trabajo FINAL PHP - Monti Bruno & Reale Aldana 
 
+// index.html
 // MOSTRAR/OCLUTAR FORMULARIOS (Login - AltaUsuario):
 
     var mostrarAltaUsuario = document.getElementById('aqui');
@@ -22,4 +23,9 @@
     });
 
 // FIN MOSTRAR/OCULTAR FORMULARIOS.
+
+/*****************************************************************************/
+
+// home.php
+// MOSTRAR/OCLUTAR FORMULARIOS (Login - AltaUsuario):
 
