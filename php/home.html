@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -39,12 +40,13 @@
 
         <div class="home-lateral-derecho">
             <!-- Mensaje de Bienvenida! -->
-            <div>
-                <h2 class="bienvenido">Bienvenid@</h2>
+            <div class="bienvenido oculto">
+                <h2>Bienvenid@</h2>
             </div>
             <!-- Formulario de Nuevo Trámite -->
-            <div class="nuevo-tramite oculto">
-                <form class="nuevo-tramite-form" action="nuevo-tramite.php" method="POST">
+            <div class="nuevo-tramite visible">
+                <h2>Nuevo Trámite</h2>
+                <form class="nuevo-tramite-form" action="nuevo-tramite.php" method="POST">                    
                     <label for="">Nro de Siniestro</label>
                     <input placeholder="Ingrese Número de Stro" type="number" autocomplete="off" required>
                     <label for="">Cliente</label>

@@ -17,10 +17,79 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 </head>
-<body>
 
-    <h1>Bienvenido</h1>
+<body class="body">
+
+    <main class="main">
+        <div class="home-lateral-izquirdo">
+            
+            <div class="iconos-home">
+                <img src="../img/btn/new.png" alt="Nuevo_trámite">
+                <p>Nuevo Trámite</p>
+            </div>
+            <div class="iconos-home">
+                <img src="../img/btn/saved.png" alt="Consultar_trámite">
+                <p>Consultar Trámite</p>
+            </div>
+            <div class="iconos-home">
+                <img src="../img/btn/settings.png" alt="Ajustes_cuenta">
+                <p>Ajustes de Cuenta</p>
+            </div>
+        </div>
+
+        <div class="home-lateral-derecho">
+            <!-- Mensaje de Bienvenida! -->
+            <div class="bienvenido oculto">
+                <h2>Bienvenid@</h2>
+            </div>
+            <!-- Formulario de Nuevo Trámite -->
+            <div class="nuevo-tramite visible">
+                <h2>Nuevo Trámite</h2>
+                <form class="nuevo-tramite-form" action="nuevo-tramite.php" method="POST">                    
+                    <label for="">Nro de Siniestro</label>
+                    <input placeholder="Ingrese Número de Stro" type="number" autocomplete="off" required>
+                    <label for="">Cliente</label>
+                    <input placeholder="Nombre y Apellido del cliente" type="text" autocomplete="off" required>
+                    <label for="">Vahículo</label>
+                    <input placeholder="Marca y modelo del auto" type="text" autocomplete="off">
+                    <label for="">Dominio</label>
+                    <input placeholder="Ingrese" type="text" autocomplete="off" required>
+                    <label for="">F15</label>
+                    <input placeholder="Ingrese" type="checkbox" autocomplete="off">
+                    <label for="">Baja Fiscal</label>
+                    <input placeholder="Ingrese" type="checkbox" autocomplete="off">
+                    <label for="">Baja GNC</label>
+                    <input placeholder="Ingrese" type="checkbox" autocomplete="off">
+                    <label for="">Jurisdicción</label>
+                    <input type="" autocomplete="off" required>
+                    <label for="">Fecha del trámite</label>
+                    <input type="date" autocomplete="off" required>
+                    <label for="">Importe</label>
+                    <input placeholder="Valor en PesosAS" type="number" autocomplete="off" required>
+                    <label for="">Estado</label>
+                    <input type="text" autocomplete="off" required>
+
+                    <button class="boton">Cargar datos</button>
+
+                </form>
+
+            </div>
+
+            <!-- Mensaje de Consulta de Trámite -->
+            <div class="consultar-tramite">
+                
+            </div>
+
+            <!-- Mensaje de Ajustes de Cuenta -->
+            <div class="ajustes-cuenta">
+                
+            </div>
+        </div>
+
+    </main>
 
     
+    <!-- Script de JS: -->
+    <script src="../js/script.js"></script>
 </body>
 </html>

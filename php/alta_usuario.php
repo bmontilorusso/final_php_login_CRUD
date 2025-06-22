@@ -6,7 +6,6 @@
 include('conexion_DB.php');
 
 // Declaración de variables:
-
 $nombre = $_POST['nombre'];
 $apellido = $_POST['apellido'];
 $mail = $_POST['mail'];
@@ -20,7 +19,6 @@ $sql = "INSERT INTO USUARIOS (NOMBRE, APELLIDO, MAIL, USUARIO, PASS, ID_CARGO, H
 $resultado = mysqli_query($conn, $sql);
 
 // Validación de éxito en creación:
-
 if ($resultado) {
     session_start();
     $_SESSION['nuevoUsuario'] = $nuevoUsuario;
