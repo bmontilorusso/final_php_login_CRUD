@@ -47,27 +47,27 @@
                 <h2>Nuevo Trámite</h2>
                 <form class="nuevo-tramite-form" action="nuevo-tramite.php" method="POST">                    
                     <label for="">Nro de Siniestro</label>
-                    <input placeholder="Ingrese Número de Stro" type="number" autocomplete="off" required>
+                    <input name="nroSiniestro" placeholder="Ingrese Número de Stro" type="number" autocomplete="off" required>
                     <label for="">Cliente</label>
-                    <input placeholder="Nombre y Apellido del cliente" type="text" autocomplete="off" required>
+                    <input name="cliente" placeholder="Nombre y Apellido del cliente" type="text" autocomplete="off" required>
                     <label for="">Vahículo</label>
-                    <input placeholder="Marca y modelo del auto" type="text" autocomplete="off">
+                    <input name="vehiculo" placeholder="Marca y modelo del auto" type="text" autocomplete="off">
                     <label for="">Dominio</label>
-                    <input placeholder="Ingrese" type="text" autocomplete="off" required>
+                    <input name="dominio" placeholder="Ingrese" type="text" autocomplete="off" required>
                     <label for="">F15</label>
-                    <input placeholder="Ingrese" type="checkbox" autocomplete="off">
+                    <input name="f15" type="checkbox" autocomplete="off">
                     <label for="">Baja Fiscal</label>
-                    <input placeholder="Ingrese" type="checkbox" autocomplete="off">
+                    <input name="bajaFiscal" type="checkbox" autocomplete="off">
                     <label for="">Baja GNC</label>
-                    <input placeholder="Ingrese" type="checkbox" autocomplete="off">
+                    <input name="bajaGNC" type="checkbox" autocomplete="off">
                     <label for="">Jurisdicción</label>
-                    <input type="" autocomplete="off" required>
+                    <input name="jurisdiccion" type="" autocomplete="off" required>
                     <label for="">Fecha del trámite</label>
-                    <input type="date" autocomplete="off" required>
+                    <input name="fechaTramite" type="date" autocomplete="off" required>
                     <label for="">Importe</label>
-                    <input placeholder="Valor en PesosAS" type="number" autocomplete="off" required>
+                    <input name="importe" placeholder="Valor en PesosAS" type="number" autocomplete="off" required>
                     <label for="">Estado</label>
-                    <input type="text" autocomplete="off" required>
+                    <input name="estado" type="text" autocomplete="off" required>
 
                     <button class="boton">Cargar datos</button>
 
