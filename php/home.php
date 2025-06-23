@@ -80,8 +80,29 @@
             </div>
 
             <!-- Mensaje de Consulta de Trámite -->
-            <div class="consultar-tramite">
-                
+            <div class="consultar-tramite oculto">
+
+                <div class="tabla">
+                    <?php
+                        include('conexion_db.php');
+                        $id_usuario = $_SESSION['id_usuario'];
+
+                        $sql = "SELECT NRO_SINIESTRO, ASEGURADO, VEHICULO FROM TRAMITES WHERE ID_USUARIO = '$id_usuario';";
+
+                        $resultado = mysqli_query($conn, $sql);
+                    ?>
+                    
+                    <div class="encabezado-tabla">Nro Siniestro</div>
+                    <div class="encabezado-tabla">Asegurado</div>
+                    <div class="encabezado-tabla">Vehículo</div>
+
+                    <?php while ($fila = mysqli_fetch_assoc($resultado)): ?>
+                        <div> <?php echo $fila['NRO_SINIESTRO']?> </div>
+                        <div> <?php echo $fila['ASEGURADO']?> </div>
+                        <div> <?php echo $fila['VEHICULO']?> </div>
+                    <?php endwhile; ?>
+
+                </div>
             </div>
 
             <!-- Mensaje de Ajustes de Cuenta -->

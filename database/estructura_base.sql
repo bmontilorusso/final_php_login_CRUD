@@ -105,7 +105,7 @@ INSERT INTO TRAMITES (ID_TRAMITE, NRO_SINIESTRO, ASEGURADO, VEHICULO, DOMINIO_PA
 (2, 88888, 'Juan Bolsa', 'Gol AB9 GLi', 'ZZZ999', null, null,'NO', 2, 1, 1, '2025-04-03', 25000),
 (3, 77777, 'Cielo Blanco', 'Bora 1.8', 'AA555ZZ', 'SI', 'SI','NO', 2, 1, 2, '2025-02-18', 20000),
 (4, 555000, 'José Rosas', 'Saveiro D 1.9', 'ABC123', null, 'SI','NO', 2, 2, 2, '2024-12-21', 35000),
-(5, 999666, 'Walter Blanco', 'Suzuki Fun', 'ZZ007PL', 'SI', null,'NO', 3, 3, 2, '2025-04-10', 8000);
+(5, 999666, 'Héctor Salamanca', 'Suzuki Fun', 'ZZ007PL', 'SI', null,'NO', 3, 3, 2, '2025-04-10', 8000);
 
 -- Fin del Script --
 
