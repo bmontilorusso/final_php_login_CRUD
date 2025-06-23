@@ -1,3 +1,7 @@
+<?php
+    include('validacion_sesion.php');
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -55,11 +59,11 @@
                     <label for="">Dominio</label>
                     <input name="dominio" placeholder="Ingrese" type="text" autocomplete="off" required>
                     <label for="">F15</label>
-                    <input name="f15" type="checkbox" autocomplete="off">
+                    <input name="f15" type="checkbox" autocomplete="off" value="SI">
                     <label for="">Baja Fiscal</label>
-                    <input name="bajaFiscal" type="checkbox" autocomplete="off">
+                    <input name="bajaFiscal" type="checkbox" autocomplete="off" value="SI">
                     <label for="">Baja GNC</label>
-                    <input name="bajaGNC" type="checkbox" autocomplete="off">
+                    <input name="bajaGNC" type="checkbox" autocomplete="off" value="SI">
                     <label for="">Jurisdicción</label>
                     <input name="jurisdiccion" type="" autocomplete="off" required>
                     <label for="">Fecha del trámite</label>

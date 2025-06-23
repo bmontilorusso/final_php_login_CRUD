@@ -4,6 +4,7 @@
 
 // Importaciones:
 include('conexion_DB.php');
+$usuario = $_SESSION['usuario'];
 
 // Declaración de variables:
 $nombre = $_POST['nombre'];
