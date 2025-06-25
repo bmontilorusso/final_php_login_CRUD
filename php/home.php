@@ -47,7 +47,7 @@
                 <h2>Bienvenid@</h2>
             </div>
             <!-- Formulario de Nuevo Trámite -->
-            <div class="nuevo-tramite visible">
+            <div class="nuevo-tramite oculto">
                 <h2>Nuevo Trámite</h2>
                 <form class="nuevo-tramite-form" action="nuevo-tramite.php" method="POST">                    
                     <label for="">Nro de Siniestro</label>
@@ -80,26 +80,45 @@
             </div>
 
             <!-- Mensaje de Consulta de Trámite -->
-            <div class="consultar-tramite oculto">
-
+            <div class="consultar-tramite visible">
+                <div class="barra-superior-consultar-tramite">
+                    <h2>Mis támites</h2>                    
+                    <img src="../img/btn/close.png" alt="cerrar">
+                </div>
                 <div class="tabla">
                     <?php
                         include('conexion_db.php');
                         $id_usuario = $_SESSION['id_usuario'];
 
-                        $sql = "SELECT NRO_SINIESTRO, ASEGURADO, VEHICULO FROM TRAMITES WHERE ID_USUARIO = '$id_usuario';";
+                        $sql = "SELECT * FROM TRAMITES WHERE ID_USUARIO = '$id_usuario';";
 
                         $resultado = mysqli_query($conn, $sql);
                     ?>
                     
                     <div class="encabezado-tabla">Nro Siniestro</div>
-                    <div class="encabezado-tabla">Asegurado</div>
+                    <div class="encabezado-tabla">Cliente</div>
                     <div class="encabezado-tabla">Vehículo</div>
+                    <div class="encabezado-tabla">Dominio</div>
+                    <div class="encabezado-tabla">F15</div>
+                    <div class="encabezado-tabla">Baja Fiscal</div>
+                    <div class="encabezado-tabla">Baja GNC Enargas</div>
+                    <div class="encabezado-tabla">Jurisdicción</div>
+                    <div class="encabezado-tabla">Estado Trámite</div>
+                    <div class="encabezado-tabla">Fecha Trámite</div>
+                    <div class="encabezado-tabla">Importe ($)</div>
 
                     <?php while ($fila = mysqli_fetch_assoc($resultado)): ?>
-                        <div> <?php echo $fila['NRO_SINIESTRO']?> </div>
-                        <div> <?php echo $fila['ASEGURADO']?> </div>
-                        <div> <?php echo $fila['VEHICULO']?> </div>
+                        <div class="registros"> <?php echo $fila['NRO_SINIESTRO']?> </div>
+                        <div class="registros"> <?php echo $fila['ASEGURADO']?> </div>
+                        <div class="registros"> <?php echo $fila['VEHICULO']?> </div>
+                        <div class="registros"> <?php echo $fila['DOMINIO_PATENTE']?> </div>
+                        <div class="registros"> <?php echo $fila['F15']?> </div>
+                        <div class="registros"> <?php echo $fila['BAJA_FISCAL']?> </div>
+                        <div class="registros"> <?php echo $fila['BAJA_GNC_ENARGAS']?> </div>
+                        <div class="registros"> <?php echo $fila['ID_JURISDICCION']?> </div>
+                        <div class="registros"> <?php echo $fila['ID_ESTADO_TRAMITE']?> </div>
+                        <div class="registros"> <?php echo $fila['FECHA_TRAMITE']?> </div>
+                        <div class="registros"> <?php echo $fila['IMPORTE_TRAMITE']?> </div>
                     <?php endwhile; ?>
 
                 </div>

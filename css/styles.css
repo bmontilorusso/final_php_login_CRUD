@@ -159,6 +159,8 @@ h2 {
 
 /************************** home.php **************************/
 
+/* Alta de Trámite: */
+
 .body {
     background-image: url(../img/Fondo_home.png);
     background-repeat: no-repeat;
@@ -180,23 +182,24 @@ h2 {
 
 .home-lateral-izquirdo {
     background-color: var(--beigePrincipal);
-    width: 30%;
-    min-width: 30rem;
+    width: 10%;
+    min-width: 20rem;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: space-evenly;
 }
 
 .iconos-home {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
     cursor: pointer;
 }
 
 .iconos-home img {
-    width: 15rem;
+    width: 10rem;
 }
 
 .iconos-home p {
@@ -208,7 +211,7 @@ h2 {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    width: 70%;
+    width: 90%;
 }
 
 .bienvenido h2 {
@@ -220,3 +223,39 @@ h2 {
     grid-template-columns: repeat(2, 1fr);
 }
 
+/* Consulta de trámites: */
+
+.consultar-tramite {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.barra-superior-consultar-tramite {
+    display: flex;
+    flex-direction: row;
+}
+
+.barra-superior-consultar-tramite img {
+    width: 5rem;
+}
+
+.tabla {
+    display: grid;
+    grid-template-columns: repeat(11, 1fr);
+    text-align: center;
+    max-width: 95%;
+    margin: auto;
+}
+
+.tabla div {
+    border-bottom: 1px solid var(--verdeOliva);
+    
+}
+
+.encabezado-tabla {
+    background-color: var(--beigePrincipal);
+    font-weight: bold;
+
+}
