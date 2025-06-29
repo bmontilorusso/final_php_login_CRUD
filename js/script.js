@@ -22,7 +22,7 @@
         formAltaUsuario.classList.remove('visible');
     });
 
-// FIN MOSTRAR/OCULTAR FORMULARIOS.
+// FIN MOSTRAR/OCULTAR FORMULARIOS (index.html).
 
 /*****************************************************************************/
 
@@ -37,3 +37,39 @@ var formAltaTramite = document.getElementById('formAltaUsuario');
 var formConsultaTramite = document.getElementById('consultarTramite');
 var formAjustesUsuario = document.getElementById('AjustesUsuario');
 var bienvenido = document.getElementById('bienvenido');
+
+/*
+Código faltante de Monti
+*/
+
+// FIN MOSTRAR/OCULTAR FORMULARIOS (home.php).
+
+/*****************************************************************************/
+
+// index.html
+// Validación de formatos de campos:
+
+// Aldi, vos trabajá a partir de acá:
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*****************************************************************************/
