@@ -147,6 +147,14 @@ h2 {
     color: var(--azulOscuro);
 }
 
+/* Obligatoriedad de campos (asterisco): */
+
+.obligatorio::after {
+    content: " *";
+    color: var(--alertasRojo);
+    font-weight: bold;
+}
+
 /* Ocultar / mostrar formularios */
 
 .visible {
