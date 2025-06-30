@@ -79,8 +79,8 @@
 
             </div>
 
-            <!-- Mensaje de Consulta de Trámite -->
-            <div class="consultar-tramite visible">
+            <!-- Formulario de Consulta de Trámite -->
+            <div class="consultar-tramite oculto">
                 <div class="barra-superior-consultar-tramite">
                     <h2>Mis támites</h2>                    
                     <img src="../img/btn/close.png" alt="cerrar">
@@ -125,9 +125,43 @@
             </div>
 
             <!-- Mensaje de Ajustes de Cuenta -->
-            <div class="ajustes-cuenta">
+            <div class="ajustes-cuenta-usuario visible">
+
+                <h2>Mis datos</h2>
+
+                <form class="" action="ajustes-cuenta-usuario.php" method="POST">
+                    <label for="">Nombre</label>
+                    <input name="nombre" placeholder="" type="text" autocomplete="off">
+
+                    <label for="">Apellido</label>
+                    <input name="apellido" placeholder="" type="text" autocomplete="off">
+
+                    <label for="">Fecha de nacimiento</label>
+                    <input name="fechaNacimiento" placeholder="" type="text" autocomplete="off">
+
+                    <label for="">mail</label>
+                    <input name="mail" placeholder="" type="text" autocomplete="off">
+
+                    <label for="">teléfono</label>
+                    <input name="telefono" placeholder="" type="text" autocomplete="off">
+
+                    <label for="">Usuario</label>
+                    <input name="usuario" placeholder="" type="text" autocomplete="off">
+
+                    <label for="">Contraseña</label>
+                    <input name="pass" placeholder="" type="text" autocomplete="off">
+
+                    <label for="">Cargo</label>
+                    <input name="cargo" placeholder="" type="text" autocomplete="off">
+
+                    <button class="boton">Actualizar datos</button>
+
+                </form>
+
                 
             </div>
+            <!-- Fin del formulario de Ajustes de la Cuenta del Usuario -->
+
         </div>
 
     </main>

@@ -4,7 +4,7 @@ En esta carpeta dejo un archivo "estructura_base.sql" que sirve para "dejar a pu
 
 Simplemente hay que sombrear todo y ejecutarlo en Workbench (o en PHP Admin, no recuerdo cuál de los 2 usabas).
 
-- TIP: Aldi, para ejecutar un SCRIPT entero y no sólo la primer query, hay que usar SHIFT + CTRL + ENTER.
+- TIP: Aldi, para ejecutar un SCRIPT entero y no sólo la primer query, hay que usar SHIFT + CTRL + ENTER (yo estuve como una hora volviéndome loco con eso!!!).
 
 # Al ejecutar ese Script:
 

@@ -155,16 +155,6 @@ h2 {
     font-weight: bold;
 }
 
-/* Ocultar / mostrar formularios */
-
-.visible {
-    display: flex;
-}
-
-.oculto {
-    display: none;
-}
-
 /************************** home.php **************************/
 
 /* Alta de Trámite: */
@@ -266,4 +256,14 @@ h2 {
     background-color: var(--beigePrincipal);
     font-weight: bold;
 
+}
+
+/* Ocultar / mostrar formularios */
+
+.visible {
+    display: flex;
+}
+
+.oculto {
+    display: none;
 }
