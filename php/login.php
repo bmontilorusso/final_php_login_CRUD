@@ -10,7 +10,7 @@ $usuario = trim($_POST['usuario']);
 $pass = $_POST['pass']; // Estoy en duda si usar trim para el pass (consultar a los profes).
 
 // Creación de QUERY SQL:
-$sql = "Select * from USUARIOS Where USUARIO = '$usuario' AND PASS = '$pass';";
+$sql = "Select * from USUARIOS Where BINARY USUARIO = '$usuario' AND BINARY PASS = '$pass';";
 
 $resultado = mysqli_query($conn, $sql);
 
