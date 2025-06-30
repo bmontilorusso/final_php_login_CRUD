@@ -6,8 +6,8 @@
 include('conexion_DB.php');
 
 // Creación y asignación de variables:
-$usuario = $_POST['usuario'];
-$pass = $_POST['pass'];
+$usuario = trim($_POST['usuario']);
+$pass = $_POST['pass']; // Estoy en duda si usar trim para el pass (consultar a los profes).
 
 // Creación de QUERY SQL:
 $sql = "Select * from USUARIOS Where USUARIO = '$usuario' AND PASS = '$pass';";

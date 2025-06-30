@@ -11,11 +11,11 @@ session_abort();
 include('conexion_DB.php');
 
 // Declaración de variables:
-$nombre = $_POST['nombre'];
-$apellido = $_POST['apellido'];
-$mail = $_POST['mail'];
-$nuevoUsuario = $_POST['nuevoUsuario'];
-$nuevaPass = $_POST['nuevaPass'];
+$nombre = trim($_POST['nombre']);
+$apellido = trim($_POST['apellido']);
+$mail = trim($_POST['mail']);
+$nuevoUsuario = trim($_POST['nuevoUsuario']);
+$nuevaPass = trim($_POST['nuevaPass']);
 
 // Generación de la Querys:
 $sql = "INSERT INTO USUARIOS (NOMBRE, APELLIDO, MAIL, USUARIO, PASS, ID_CARGO, HABILITADO) VALUES ('$nombre', '$apellido', '$mail', '$nuevoUsuario', '$nuevaPass', 1, 'SI');";

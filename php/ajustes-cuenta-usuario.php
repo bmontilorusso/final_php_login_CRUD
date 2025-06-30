@@ -42,7 +42,7 @@ if (empty($_POST['fechaNacimiento'])) {
 if (empty($_POST['mail'])) {
     $mail = $filaDatosPrevios["MAIL"];
 } else {
-    $mail = $_POST['mail'];
+    $mail = trim($_POST['mail']);
 }
 
 if (empty($_POST['telefono'])) {
@@ -54,13 +54,13 @@ if (empty($_POST['telefono'])) {
 if (empty($_POST['usuario'])) {
     $usuario = $filaDatosPrevios["USUARIO"];
 } else {
-    $usuario = $_POST['usuario'];
+    $usuario = trim($_POST['usuario']);
 }
 
 if (empty($_POST['pass'])) {
     $pass = $filaDatosPrevios["PASS"];
 } else {
-    $pass = $_POST['pass'];
+    $pass = trim($_POST['pass']);
 }
 
 if (empty($_POST['IDcargo'])) {
@@ -84,9 +84,6 @@ if ($resultado) {
 } else {
     echo "Error al intentar modificar: " . mysqli_error($conn);
 }
-
-
-
 
 
 
