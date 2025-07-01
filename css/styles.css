@@ -259,7 +259,7 @@ h2 {
 /* Ocultar / mostrar formularios */
 
 .visible {
-    display: block;
+    display: flex;
 }
 
 .oculto {
