@@ -1,4 +1,6 @@
-// Trabajo FINAL PHP - Monti Bruno & Reale Aldana 
+// Trabajo FINAL PHP - Monti Bruno & Reale Aldana
+
+console.log('JS cargado');
 
 // index.html
 // MOSTRAR/OCLUTAR FORMULARIOS (Login - AltaUsuario):
@@ -29,18 +31,38 @@
 // home.php
 // MOSTRAR/OCLUTAR FORMULARIOS (Login - AltaUsuario):
 
-var mostrarAltaTramite = document.getElementById('altaTramite');
-var mostrarConsultarTramite = document.getElementById('consultarTramite');
-var mostrarAjustesUsuario = document.getElementById('ajustesUsuario');
+function ocultarFormularios() {
+    document.getElementById('form-bienvenido').classList.add('oculto');
+    document.getElementById('form-nuevo-tramite').classList.add('oculto');
+    document.getElementById('form-consultar-tramite').classList.add('oculto');
+    document.getElementById('form-ajustes-usuario').classList.add('oculto');
+    document.getElementById('form-bienvenido').classList.remove('visible');
+    document.getElementById('form-nuevo-tramite').classList.remove('visible');
+    document.getElementById('form-consultar-tramite').classList.remove('visible');
+    document.getElementById('form-ajustes-usuario').classList.remove('visible');
+}
 
-var formAltaTramite = document.getElementById('formAltaUsuario');
-var formConsultaTramite = document.getElementById('consultarTramite');
-var formAjustesUsuario = document.getElementById('AjustesUsuario');
-var bienvenido = document.getElementById('bienvenido');
+function mostrarFormulario(formID) {
+    ocultarFormularios();
+    document.getElementById(formID).classList.remove('oculto');
+    document.getElementById(formID).classList.add('visible');    
+}
 
-/*
-Código faltante de Monti
-*/
+document.getElementById('boton-nuevo-tramite').addEventListener('click', function() {
+    mostrarFormulario('form-nuevo-tramite');
+});
+
+document.getElementById('boton-consulta-tramite').addEventListener('click', function() {
+    mostrarFormulario('form-consultar-tramite');
+});
+
+document.getElementById('boton-ajustes-usuario').addEventListener('click', function() {
+    mostrarFormulario('form-ajustes-usuario');
+});
+
+
+
+
 
 // FIN MOSTRAR/OCULTAR FORMULARIOS (home.php).
 

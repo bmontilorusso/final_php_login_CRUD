@@ -248,20 +248,18 @@ h2 {
 }
 
 .tabla div {
-    border-bottom: 1px solid var(--verdeOliva);
-    
+    border-bottom: 1px solid var(--verdeOliva);    
 }
 
 .encabezado-tabla {
     background-color: var(--beigePrincipal);
     font-weight: bold;
-
 }
 
 /* Ocultar / mostrar formularios */
 
 .visible {
-    display: flex;
+    display: block;
 }
 
 .oculto {

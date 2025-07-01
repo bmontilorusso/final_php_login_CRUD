@@ -27,15 +27,15 @@
     <main class="main">
         <div class="home-lateral-izquirdo">
             
-            <div class="iconos-home">
+            <div id="boton-nuevo-tramite" class="iconos-home">
                 <img src="../img/btn/new.png" alt="Nuevo_trámite">
                 <p>Nuevo Trámite</p>
             </div>
-            <div class="iconos-home">
+            <div id="boton-consulta-tramite" class="iconos-home">
                 <img src="../img/btn/saved.png" alt="Consultar_trámite">
                 <p>Consultar Trámite</p>
             </div>
-            <div class="iconos-home">
+            <div id="boton-ajustes-usuario" class="iconos-home">
                 <img src="../img/btn/settings.png" alt="Ajustes_cuenta">
                 <p>Ajustes de Cuenta</p>
             </div>
@@ -43,11 +43,12 @@
 
         <div class="home-lateral-derecho">
             <!-- Mensaje de Bienvenida! -->
-            <div class="bienvenido oculto">
+            <div id="form-bienvenido" class="bienvenido visible">
                 <h2>Bienvenid@</h2>
-            </div>
+            </div> <!-- Fin Mensaje de Bienvenida -->
+
             <!-- Formulario de Nuevo Trámite -->
-            <div class="nuevo-tramite oculto">
+            <div id="form-nuevo-tramite" class="nuevo-tramite oculto">
                 <h2>Nuevo Trámite</h2>
                 <form class="nuevo-tramite-form" action="nuevo-tramite.php" method="POST">                    
                     <label for="">Nro de Siniestro</label>
@@ -77,10 +78,10 @@
 
                 </form>
 
-            </div>
+            </div> <!-- Fin Formulario Nuevo Trámite -->
 
             <!-- Formulario de Consulta de Trámite -->
-            <div class="consultar-tramite oculto">
+            <div id="form-consultar-tramite" class="consultar-tramite oculto">
                 <div class="barra-superior-consultar-tramite">
                     <h2>Mis támites</h2>                    
                     <img src="../img/btn/close.png" alt="cerrar">
@@ -106,6 +107,7 @@
                     <div class="encabezado-tabla">Estado Trámite</div>
                     <div class="encabezado-tabla">Fecha Trámite</div>
                     <div class="encabezado-tabla">Importe ($)</div>
+                    
 
                     <?php while ($fila = mysqli_fetch_assoc($resultado)): ?>
                         <div class="registros"> <?php echo $fila['NRO_SINIESTRO']?> </div>
@@ -122,10 +124,10 @@
                     <?php endwhile; ?>
 
                 </div>
-            </div>
+            </div> <!-- Fin Formulario de Consulta de Trámite -->
 
-            <!-- Mensaje de Ajustes de Cuenta -->
-            <div class="ajustes-cuenta-usuario visible">
+            <!-- Formulario de Ajustes de Cuenta -->
+            <div id="form-ajustes-usuario" class="ajustes-cuenta-usuario oculto">
 
                 <h2>Mis datos</h2>
 
@@ -159,8 +161,7 @@
                 </form>
 
                 
-            </div>
-            <!-- Fin del formulario de Ajustes de la Cuenta del Usuario -->
+            </div> <!-- Fin del formulario de Ajustes de la Cuenta del Usuario -->
 
         </div>
 
