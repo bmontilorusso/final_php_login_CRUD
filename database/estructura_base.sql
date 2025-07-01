@@ -107,6 +107,26 @@ INSERT INTO TRAMITES (ID_TRAMITE, NRO_SINIESTRO, ASEGURADO, VEHICULO, DOMINIO_PA
 (4, 555000, 'José Rosas', 'Saveiro D 1.9', 'ABC123', null, 'SI','NO', 2, 2, 2, '2024-12-21', 35000),
 (5, 999666, 'Héctor Salamanca', 'Suzuki Fun', 'ZZ007PL', 'SI', null,'NO', 3, 3, 2, '2025-04-10', 8000);
 
+-- Algunos Usuarios genéricos más: --
+INSERT INTO USUARIOS (NOMBRE, APELLIDO, FECHA_NACIMIENTO, MAIL, TELEFONO, USUARIO, PASS, ID_CARGO, HABILITADO) VALUES
+('Ana', 'Martínez', '1995-11-05', 'ana.martinez@mail.com', '1122334455', 'anam', 'pass123', 2, 'SI'),
+('Luis', 'Fernández', '1982-03-12', 'luis.fernandez@mail.com', '1155778899', 'luisf', 'pass123', 1, 'SI'),
+('Laura', 'Sánchez', '1988-07-30', 'laura.sanchez@mail.com', '1166889900', 'lauras', 'pass123', 2, 'NO'),
+('Diego', 'Ramírez', '1983-12-25', 'diego.ramirez@mail.com', '1177990011', 'diegor', 'pass123', 1, 'SI'),
+('Sofía', 'Torres', '1992-05-18', 'sofia.torres@mail.com', '1188001122', 'sofiat', 'pass123', 2, 'SI'),
+('Fernando', 'Gómez', '1975-04-22', 'fernando.gomez@mail.com', '1199112233', 'fernandog', 'pass123', 1, 'NO'),
+('Paula', 'Díaz', '1998-08-08', 'paula.diaz@mail.com', '1100112233', 'paulad', 'pass123', 2, 'SI');
+
+-- Algunos Trámites genéricos más: --
+INSERT INTO TRAMITES (NRO_SINIESTRO, ASEGURADO, VEHICULO, DOMINIO_PATENTE, F15, BAJA_FISCAL, BAJA_GNC_ENARGAS, ID_JURISDICCION, ID_ESTADO_TRAMITE, ID_USUARIO, FECHA_TRAMITE, IMPORTE_TRAMITE) VALUES
+(100004, 'Juan Pérez', 'Chevrolet Onix', 'JKL012', 'NO', 'NO', 'NO', 1, 3, 1, '2025-06-04', 70000),
+(100005, 'Juan Pérez', 'Volkswagen Gol', 'MNO345', 'SI', 'SI', 'NO', 2, 2, 1, '2025-06-05', 52000),
+(100006, 'Juan Pérez', 'Peugeot 208', 'PQR678', 'NO', 'NO', 'SI', 3, 1, 1, '2025-06-06', 58000),
+(100010, 'María García', 'Chevrolet Onix', 'BCD890', 'NO', 'NO', 'NO', 1, 3, 2, '2025-06-04', 70500),
+(100011, 'María García', 'Volkswagen Gol', 'EFG123', 'SI', 'SI', 'NO', 2, 2, 2, '2025-06-05', 52500),
+(100012, 'María García', 'Peugeot 208', 'HIJ456', 'NO', 'NO', 'SI', 3, 1, 2, '2025-06-06', 58500);
+
+
 -- Fin del Script --
 
 /* ==========================================================================
