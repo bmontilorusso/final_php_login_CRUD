@@ -37,37 +37,44 @@
                 <p>Consultar Trámite</p>
             </div>
             <div id="boton-ajustes-usuario" class="iconos-home">
-                <img src="../img/btn/settings.png" alt="Ajustes_cuenta">
+                <img src="../img/btn/user.png" alt="Ajustes_cuenta">
                 <p>Ajustes de Cuenta</p>
             </div>
         </div>
 
         <div class="home-lateral-derecho">
+            <div id="avatar-cerrar-sesion" class="avatar-cerrar-sesion oculto">
+                <h2 class="nombre-usuario"> <?php echo $_SESSION['nombre'] . ' ' . $_SESSION['apellido'] ?> </h2>
+                <div id="boton-salir" class="iconos-ACS">
+                    <img class="cerrar-sesion" src="../img/btn/close.png" alt="cerrar_sesion">
+                    <p>Salir</p>
+                </div>
+            </div>
             <!-- Mensaje de Bienvenida! -->
-            <div id="form-bienvenido" class="bienvenido oculto">
-                <h2>Bienvenid@</h2>
+            <div id="form-bienvenido" class="bienvenido visible">
+                <h2>Bienvenid@, <span class="span"><?php echo $_SESSION['nombre'] ?></span> </h2>
             </div> <!-- Fin Mensaje de Bienvenida -->
 
             <!-- Formulario de Nuevo Trámite -->
-            <div id="form-nuevo-tramite" class="nuevo-tramite visible">
-                <h2>Nuevo Trámite</h2>
-                <form class="nuevo-tramite-form" action="nuevo-tramite.php" method="POST">                    
+            <div id="form-nuevo-tramite" class="nuevo-tramite oculto">
+                <h2>Nuevo <span class="span">Trámite</span></h2>
+                <form class="nuevo-tramite-form" id="nuevo-tramite-form" action="nuevo-tramite.php" method="POST">                    
                     <label for="">Nro de Siniestro</label>
-                    <input name="nroSiniestro" placeholder="Ingrese Número de Stro" type="number" autocomplete="off" required>
+                    <input class="nuevo-tramite-inputs" name="nroSiniestro" placeholder="Ingrese Número de Stro" type="number" autocomplete="off" required>
                     <label for="">Cliente</label>
-                    <input name="cliente" placeholder="Nombre y Apellido del cliente" type="text" autocomplete="off" required>
+                    <input class="nuevo-tramite-inputs" name="cliente" placeholder="Nombre y Apellido del cliente" type="text" autocomplete="off" required>
                     <label for="">Vahículo</label>
-                    <input name="vehiculo" placeholder="Marca y modelo del auto" type="text" autocomplete="off">
+                    <input class="nuevo-tramite-inputs" name="vehiculo" placeholder="Marca y modelo del auto" type="text" autocomplete="off">
                     <label for="">Dominio</label>
-                    <input name="dominio" placeholder="Ingrese" type="text" autocomplete="off" required>
+                    <input class="nuevo-tramite-inputs" name="dominio" placeholder="Ingrese" type="text" autocomplete="off" required>
                     <label for="">F15</label>
-                    <input name="f15" type="checkbox" autocomplete="off" value="SI">
+                    <input class="nuevo-tramite-inputs" name="f15" type="checkbox" autocomplete="off" value="SI">
                     <label for="">Baja Fiscal</label>
-                    <input name="bajaFiscal" type="checkbox" autocomplete="off" value="SI">
+                    <input class="nuevo-tramite-inputs" name="bajaFiscal" type="checkbox" autocomplete="off" value="SI">
                     <label for="">Baja GNC</label>
-                    <input name="bajaGNC" type="checkbox" autocomplete="off" value="SI">
+                    <input class="nuevo-tramite-inputs" name="bajaGNC" type="checkbox" autocomplete="off" value="SI">
                     <label for="">Jurisdicción</label>
-                    <select name="jurisdiccion" required>
+                    <select class="nuevo-tramite-inputs" name="jurisdiccion" required>
                         <option value="" disabled selected>-Seleccione Jurisdicción-</option>
                         <?php
                             // La inclusión a conexion_db la hice al principio.
@@ -81,11 +88,11 @@
                         <?php endwhile; ?>
                     </select>
                     <label for="">Fecha del trámite</label>
-                    <input name="fechaTramite" type="date" autocomplete="off" required>
+                    <input class="nuevo-tramite-inputs" name="fechaTramite" type="date" autocomplete="off" required>
                     <label for="">Importe ($AR)</label>
-                    <input name="importe" placeholder="Valor en PesosAS" type="number" autocomplete="off" required>
+                    <input class="nuevo-tramite-inputs" name="importe" placeholder="Valor en PesosAS" type="number" autocomplete="off" required>
                     <label for="">Estado</label>
-                    <select name="estado" required>
+                    <select class="nuevo-tramite-inputs" name="estado" required>
                         <option value="" disabled selected>-Seleccione Estado-</option>
                         <?php
                             // Aclaro de nuevo: la conexión a la base la hice al comienzo.
@@ -99,6 +106,7 @@
                         <?php endwhile; ?>
                     </select>
 
+                    <button class="boton limpiar" id="boton-limpiar">Limpiar todos</button>
                     <button class="boton">Cargar datos</button>
 
                 </form>
@@ -108,8 +116,7 @@
             <!-- Formulario de Consulta de Trámite -->
             <div id="form-consultar-tramite" class="consultar-tramite oculto">
                 <div class="barra-superior-consultar-tramite">
-                    <h2>Mis támites</h2>                    
-                    <img src="../img/btn/close.png" alt="cerrar">
+                    <h2>Mis <span class="span">Trámites</span></h2>
                 </div>
                 <div class="tabla">
                     <?php
@@ -154,7 +161,7 @@
             <!-- Formulario de Ajustes de Cuenta -->
             <div id="form-ajustes-usuario" class="ajustes-cuenta-usuario oculto">
 
-                <h2>Mis datos</h2>
+                <h2>Mis <span class="span">Datos</span></h2>
 
                 <form class="" action="ajustes-cuenta-usuario.php" method="POST">
                     <label for="">Nombre</label>
@@ -188,6 +195,15 @@
                 
             </div> <!-- Fin del formulario de Ajustes de la Cuenta del Usuario -->
 
+            <!-- PopUp para Cerrar Sesión -->
+            <div id="cerrar-sesion" class="cerrar-session oculto">
+                <h3>¿Segur@ que desea cerrar sesión?</h2>
+                <div class="botonera">
+                    <button id="botonNO" class="boton limpiar">No</button>
+                    <button id="botonSI" class="boton aceptar">Sí</button>
+                </div>                
+            </div> <!-- Fin del PopUp para Cerrar Sesión -->
+
         </div>
 
     </main>
@@ -197,3 +213,4 @@
     <script src="../js/home.js"></script>
 </body>
 </html>
+

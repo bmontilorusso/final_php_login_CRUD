@@ -31,11 +31,13 @@ if ($resultado) {
     session_start();
     $_SESSION['usuario'] = $nuevoUsuario;
 
-    //Almacenamiento del ID_USUARIO:
+    // Almacenamiento del ID_USUARIO y el NOMBRE del Usuario:
     $fila = mysqli_fetch_assoc($resultadoID);
     $_SESSION['id_usuario'] = $fila['ID_USUARIO'];
+    $_SESSION['nombre'] = $fila['NOMBRE'];
+    $_SESSION['apellido'] = $fila['APELLIDO'];
 
-    // redireccionamiento:
+    // Redireccionamiento:
     header("Location: home.php");
     exit();
 

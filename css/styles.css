@@ -13,6 +13,9 @@
     --azulOscuro: #1E1E1E; /* Texto */
     /* Tipografías */
     --tipografiaPrincipal: 'Urbanist', sans-serif;
+    /* para transparencias (RGB): */
+    --beigePrincipalRGB: 245, 245, 245;
+    --azulOscuroRGB: 30, 30, 30;
 }
 
 /* ESTANDARIZACIONES */
@@ -31,6 +34,10 @@ html {
 h1, h2, p {
     color: var(--azulOscuro);
     margin: 0;
+}
+
+.span {
+    font-weight: bold;
 }
 
 *, *:before, *:after {
@@ -115,6 +122,15 @@ h2 {
     color: var(--beigePrincipal);
     margin: 3.5rem 0;
     width: 50%;
+    margin: 0 auto;
+}
+
+.limpiar {
+    background-color: var(--alertasRojo);
+}
+
+.aceptar {
+    background-color: var(--alertasVerde);
 }
 
 .form-login p {
@@ -157,8 +173,6 @@ h2 {
 
 /************************** home.php **************************/
 
-/* Alta de Trámite: */
-
 .body {
     background-image: url(../img/Fondo_home.png);
     background-repeat: no-repeat;
@@ -171,11 +185,38 @@ h2 {
 .main {
     width: 120rem;
     height: 65vh;
-    background-color: var(--grisClaro);
+    background-color: rgba(var(--beigePrincipalRGB), 0.96);
     margin: 0 auto;
     display: flex;
     flex-direction: row;
     border-radius: 5px;
+    position: relative;
+}
+
+.avatar-cerrar-sesion {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    z-index: 10; /* Con esto lo ponemos encima de todo (sin entorpecer los Flex/GRID */
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.iconos-ACS {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;  
+    cursor: pointer;
+}
+
+.nombre-usuario {
+    margin-right: 1rem;
+}
+
+.avatar, .cerrar-sesion {
+    width: 5rem;
 }
 
 .home-lateral-izquirdo {
@@ -218,7 +259,10 @@ h2 {
     align-items: center;
     justify-content: center;
     gap: 5rem;
+    width: 80%;
 }
+
+/* Alta de Trámite: */
 
 .nuevo-tramite h2 {
     font-size: 35px;
@@ -228,12 +272,17 @@ h2 {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 1rem;
+    width: 100%;
 }
 
 .nuevo-tramite-form label {
-    text-align: right;  
+    text-align: right;
 }
 
+.nuevo-tramite-inputs {
+    width: 70%;
+    height: 2rem;
+}
 
 
 /* Consulta de trámites: */
@@ -269,6 +318,31 @@ h2 {
 .encabezado-tabla {
     background-color: var(--beigePrincipal);
     font-weight: bold;
+}
+
+.cerrar-session {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    background-color: var(--azulPetroleo);
+    display: flex;
+    width: 50rem;
+    height: 15rem;
+}
+
+.cerrar-session h3 {
+    text-align: center;
+    color: var(--beigePrincipal);
+}
+
+.botonera {
+    display: flex;
+    flex-direction: row;
+    gap: 3rem;
+    width: 70%;
 }
 
 /* Ocultar / mostrar formularios */

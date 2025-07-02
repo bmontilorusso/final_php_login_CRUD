@@ -1,4 +1,5 @@
 // home.php
+
 // MOSTRAR/OCLUTAR FORMULARIOS (Login - AltaUsuario):
 
 function ocultarFormularios() {
@@ -12,10 +13,17 @@ function ocultarFormularios() {
     document.getElementById('form-ajustes-usuario').classList.remove('visible');
 }
 
+function mostrarMenuFlotante() {
+    var avatarCerrarSesion = document.getElementById('avatar-cerrar-sesion');
+    avatarCerrarSesion.classList.remove('oculto');
+    avatarCerrarSesion.classList.add('visible');
+}
+
 function mostrarFormulario(formID) {
     ocultarFormularios();
+    mostrarMenuFlotante();
     document.getElementById(formID).classList.remove('oculto');
-    document.getElementById(formID).classList.add('visible');    
+    document.getElementById(formID).classList.add('visible'); 
 }
 
 document.getElementById('boton-nuevo-tramite').addEventListener('click', function() {
@@ -30,8 +38,41 @@ document.getElementById('boton-ajustes-usuario').addEventListener('click', funct
     mostrarFormulario('form-ajustes-usuario');
 });
 
-
-
-
-
 // FIN MOSTRAR/OCULTAR FORMULARIOS (home.php).
+
+/*********************************************************************************************/
+
+// Limpiar formularios:
+
+var formNuevoTramite = document.getElementById('nuevo-tramite-form');
+var botonLimpiar = document.getElementById('boton-limpiar');
+
+botonLimpiar.addEventListener('click', function() {
+    formNuevoTramite.reset();
+});
+
+/*********************************************************************************************/
+
+// PopUp para Cerrar Sesión:
+
+var popupCerrarSesion = document.getElementById('cerrar-sesion');
+var botonSalir = document.getElementById('boton-salir');
+var botonSI = document.getElementById('botonSI');
+var botonNO = document.getElementById('botonNO');
+
+// Botón de Cerrar Sesión:
+botonSalir.addEventListener('click', function() {
+    popupCerrarSesion.classList.remove('oculto');
+    popupCerrarSesion.classList.add('visible');    
+});
+
+// Cerrar PopUp:
+botonNO.addEventListener('click', function() {
+    popupCerrarSesion.classList.remove('visible');
+    popupCerrarSesion.classList.add('oculto');
+});
+
+
+
+
+

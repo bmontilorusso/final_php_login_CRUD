@@ -21,9 +21,11 @@ if (mysqli_num_rows($resultado) == 1) {
     session_start();
     $_SESSION['usuario'] = $usuario;
 
-    //Almacenamiento del ID_USUARIO:
+    //Almacenamiento del ID_USUARIO y el NOMBRE del Usuario:
     $fila = mysqli_fetch_assoc($resultado);
     $_SESSION['id_usuario'] = $fila['ID_USUARIO'];
+    $_SESSION['nombre'] = $fila['NOMBRE'];
+    $_SESSION['apellido'] = $fila['APELLIDO'];
 
     //Redireccionamiento:
     header("Location: home.php");
