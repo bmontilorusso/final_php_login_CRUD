@@ -19,9 +19,9 @@ $fechaTramite = $_POST['fechaTramite'];
 $importe = $_POST['importe'];
 $estado = $_POST['estado'];
 // Para ajustar (Checks):
-$f15 = isset($_POST['f15']) ? $_POST['f15'] : 'NO';
-$bajaFiscal = isset($_POST['bajaFiscal']) ? $_POST['bajaFiscal'] : 'NO';
-$bajaGNC = isset($_POST['bajaGNC']) ? $_POST['bajaGNC'] : 'NO';
+$f15 = isset($_POST['f15']) ? $_POST['f15'] : 'NO'; // Si trae valor, lo guardamos (configuré para que venga directamente con un "SI". Si el User no lo marca, entonces guarda "NO").
+$bajaFiscal = isset($_POST['bajaFiscal']) ? $_POST['bajaFiscal'] : 'NO'; // Same que f15.
+$bajaGNC = isset($_POST['bajaGNC']) ? $_POST['bajaGNC'] : 'NO'; // Same que f15 y bajaFiscal.
 // Los que arrastro con $_SESSION:
 $idUsuario = $_SESSION['id_usuario'];
 

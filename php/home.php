@@ -1,5 +1,6 @@
 <?php
     include('validacion_sesion.php');
+    include('conexion_db.php');
 ?>
 
 <!DOCTYPE html>
@@ -43,12 +44,12 @@
 
         <div class="home-lateral-derecho">
             <!-- Mensaje de Bienvenida! -->
-            <div id="form-bienvenido" class="bienvenido visible">
+            <div id="form-bienvenido" class="bienvenido oculto">
                 <h2>Bienvenid@</h2>
             </div> <!-- Fin Mensaje de Bienvenida -->
 
             <!-- Formulario de Nuevo Trámite -->
-            <div id="form-nuevo-tramite" class="nuevo-tramite oculto">
+            <div id="form-nuevo-tramite" class="nuevo-tramite visible">
                 <h2>Nuevo Trámite</h2>
                 <form class="nuevo-tramite-form" action="nuevo-tramite.php" method="POST">                    
                     <label for="">Nro de Siniestro</label>
@@ -66,13 +67,37 @@
                     <label for="">Baja GNC</label>
                     <input name="bajaGNC" type="checkbox" autocomplete="off" value="SI">
                     <label for="">Jurisdicción</label>
-                    <input name="jurisdiccion" type="" autocomplete="off" required>
+                    <select name="jurisdiccion" required>
+                        <option value="" disabled selected>-Seleccione Jurisdicción-</option>
+                        <?php
+                            // La inclusión a conexion_db la hice al principio.
+                            $sqlJurisdiccion = "Select * from JURISDICCION;";
+                            $resultadoJurisdiccion = mysqli_query($conn, $sqlJurisdiccion);
+                        ?>
+                        <?php while($fila = mysqli_fetch_assoc($resultadoJurisdiccion)): ?>
+                        <option value="<?php echo $fila['ID_JURISDICCION'] ?>">
+                            <?php echo $fila['DETALLE']; ?>
+                        </option>
+                        <?php endwhile; ?>
+                    </select>
                     <label for="">Fecha del trámite</label>
                     <input name="fechaTramite" type="date" autocomplete="off" required>
-                    <label for="">Importe</label>
+                    <label for="">Importe ($AR)</label>
                     <input name="importe" placeholder="Valor en PesosAS" type="number" autocomplete="off" required>
                     <label for="">Estado</label>
-                    <input name="estado" type="text" autocomplete="off" required>
+                    <select name="estado" required>
+                        <option value="" disabled selected>-Seleccione Estado-</option>
+                        <?php
+                            // Aclaro de nuevo: la conexión a la base la hice al comienzo.
+                            $sqlEstado = "Select * from ESTADO_TRAMITE;";
+                            $resultadoEstado = mysqli_query($conn, $sqlEstado);
+                        ?>
+                        <?php while($filaEstado = mysqli_fetch_assoc($resultadoEstado)): ?>
+                        <option value="<?php echo $filaEstado['ID_ESTADO_TRAMITE'] ?>">
+                            <?php echo $filaEstado['DETALLE']; ?>
+                        </option>
+                        <?php endwhile; ?>
+                    </select>
 
                     <button class="boton">Cargar datos</button>
 
@@ -88,12 +113,12 @@
                 </div>
                 <div class="tabla">
                     <?php
-                        include('conexion_db.php');
+                        // La inclusión a conexion_db la hice al principio.
                         $id_usuario = $_SESSION['id_usuario'];
 
-                        $sql = "SELECT * FROM TRAMITES WHERE ID_USUARIO = '$id_usuario';";
+                        $sqlTramites = "SELECT * FROM TRAMITES WHERE ID_USUARIO = '$id_usuario';";
 
-                        $resultado = mysqli_query($conn, $sql);
+                        $resultadoTramites = mysqli_query($conn, $sqlTramites);
                     ?>
                     
                     <div class="encabezado-tabla">Nro Siniestro</div>
@@ -109,7 +134,7 @@
                     <div class="encabezado-tabla">Importe ($)</div>
                     
 
-                    <?php while ($fila = mysqli_fetch_assoc($resultado)): ?>
+                    <?php while ($fila = mysqli_fetch_assoc($resultadoTramites)): ?>
                         <div class="registros"> <?php echo $fila['NRO_SINIESTRO']?> </div>
                         <div class="registros"> <?php echo $fila['ASEGURADO']?> </div>
                         <div class="registros"> <?php echo $fila['VEHICULO']?> </div>
