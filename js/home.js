@@ -78,7 +78,13 @@ botonSI.addEventListener('click', function() {
     window.location.href = 'logout.php';
 })
 
+/*********************************************************************************************/
 
+// Refrescar Mis Trámites
 
+var botonRefrescar = document.getElementById('refrescar');
 
+botonRefrescar.addEventListener('click', function() {
+    window.location.href = 'home.php';
+});
 

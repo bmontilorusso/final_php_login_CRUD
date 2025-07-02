@@ -82,8 +82,7 @@ h2 {
     flex-direction: column;
     width: 55%;
     align-items: center;
-    justify-content: center;
-    
+    justify-content: center;    
 }
 
 .form-altaUsuario {
@@ -122,7 +121,6 @@ h2 {
     color: var(--beigePrincipal);
     margin: 3.5rem 0;
     width: 50%;
-    margin: 0 auto;
 }
 
 .limpiar {
@@ -337,7 +335,7 @@ h2 {
     background-color: var(--azulPetroleo);
     display: flex;
     width: 50rem;
-    height: 15rem;
+    height: 25rem;
 }
 
 /* Ajustes de Cuenta de usuario */

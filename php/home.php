@@ -155,6 +155,7 @@
                     <?php endwhile; ?>
 
                 </div>
+                <button class="boton" id="refrescar">Refrescar</button>
             </div> <!-- Fin Formulario de Consulta de Trámite -->
 
             <!-- Formulario de Ajustes de Cuenta -->
@@ -164,7 +165,7 @@
 
                 <form class="ajustes-cuenta-usuario-form" action="ajustes-cuenta-usuario.php" method="POST">
                     <label for="">Nombre</label>
-                    <input name="nombre" placeholder="" type="text" autocomplete="off" value="Hola">
+                    <input name="nombre" placeholder="" type="text" autocomplete="off">
 
                     <label for="">Apellido</label>
                     <input name="apellido" placeholder="" type="text" autocomplete="off">
