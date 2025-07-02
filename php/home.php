@@ -1,6 +1,6 @@
 <?php
     include('validacion_sesion.php');
-    include('conexion_db.php');
+    include('conexion_DB.php');
 ?>
 
 <!DOCTYPE html>
@@ -185,8 +185,8 @@
                     <label for="">Contraseña</label>
                     <input name="pass" placeholder="" type="text" autocomplete="off">
 
-                    <label for="">Cargo</label>
-                    <input name="cargo" placeholder="" type="text" autocomplete="off">
+                    <!-- <label for="">Cargo</label>
+                    <input name="cargo" placeholder="" type="text" autocomplete="off"> --> <!-- Decidimos ocultar esto para evitar problemas con el llamado entre ID/NOMBRE-->
 
                     <button class="boton">Actualizar datos</button>
 
