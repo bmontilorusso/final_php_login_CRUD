@@ -183,8 +183,8 @@ h2 {
 }
 
 .main {
-    width: 120rem;
-    height: 65vh;
+    width: 100rem;
+    height: 60rem;
     background-color: rgba(var(--beigePrincipalRGB), 0.96);
     margin: 0 auto;
     display: flex;
@@ -268,14 +268,15 @@ h2 {
     font-size: 35px;
 }
 
-.nuevo-tramite-form {
+.nuevo-tramite-form, .ajustes-cuenta-usuario-form {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 1rem;
     width: 100%;
 }
 
-.nuevo-tramite-form label {
+.nuevo-tramite-form label,
+.ajustes-cuenta-usuario-form label {
     text-align: right;
 }
 
@@ -305,19 +306,25 @@ h2 {
 
 .tabla {
     display: grid;
-    grid-template-columns: repeat(11, 1fr);
+    grid-template-columns: repeat(8, 1fr);
     text-align: center;
     max-width: 95%;
     margin: auto;
 }
 
 .tabla div {
-    border-bottom: 1px solid var(--verdeOliva);    
+    border-bottom: 1px solid var(--verdeOliva);
+
+}
+
+.registros {
+    padding: .4rem 1rem;
 }
 
 .encabezado-tabla {
-    background-color: var(--beigePrincipal);
+    background-color: var(--verdeOliva);
     font-weight: bold;
+    text-align: center;
 }
 
 .cerrar-session {
@@ -331,6 +338,20 @@ h2 {
     display: flex;
     width: 50rem;
     height: 15rem;
+}
+
+/* Ajustes de Cuenta de usuario */
+
+.ajustes-cuenta-usuario {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.ajustes-cuenta-usuario-form {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
 }
 
 .cerrar-session h3 {

@@ -44,9 +44,9 @@ ALTER TABLE USUARIOS CHANGE FECHA_NACIMIENTO FECHA_NACIMIENTO DATE; -- Hicimos q
 
 -- INSERSIÓN de dos usuarios de prueba: --
 INSERT INTO USUARIOS (ID_USUARIO, NOMBRE, APELLIDO, FECHA_NACIMIENTO, MAIL, TELEFONO, USUARIO, PASS, ID_CARGO, HABILITADO) VALUES
-(1, 'Nombre Usuario 1', 'Apellido Usuario 1', '1989-06-24', 'mail_prueba_1@prueba.com', null, 'userPrueba1', 'clave1', 1,'SI'),
-(2, 'Nombre Usuario 2', 'Apellido Usuario 2', '1996-06-28', 'mail_prueba_2@prueba.com', '1199998888', 'userPrueba2', 'clave2', 3,'SI'),
-(3, 'Felipe', 'Pompín', '2011-06-28', 'feli_naranjoso@prueba.com', null, 'userPrueba2', 'clave3', 2,'NO');
+(1, 'Aldana', 'Reale', '1996-06-28', 'mail_prueba_1@prueba.com', null, 'areale', 'facil1', 1,'SI'),
+(2, 'Bruno', 'Monti', '1989-06-24', 'mail_prueba_2@prueba.com', '1199998888', 'bmonti', 'clave2', 3,'SI'),
+(3, 'Felipe', 'Pompín', '2011-06-28', 'feli_naranjoso@prueba.com', null, 'Felipe', 'facil1', 2,'NO');
 
 -- Creación de la tabla Jurisdicción: --
 CREATE TABLE JURISDICCION (

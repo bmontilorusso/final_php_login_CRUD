@@ -57,7 +57,7 @@
 
             <!-- Formulario de Nuevo Trámite -->
             <div id="form-nuevo-tramite" class="nuevo-tramite oculto">
-                <h2>Nuevo <span class="span">Trámite</span></h2>
+                <h2 class="titulo-seccion">Nuevo <span class="span">Trámite</span></h2>
                 <form class="nuevo-tramite-form" id="nuevo-tramite-form" action="nuevo-tramite.php" method="POST">                    
                     <label for="">Nro de Siniestro</label>
                     <input class="nuevo-tramite-inputs" name="nroSiniestro" placeholder="Ingrese Número de Stro" type="number" autocomplete="off" required>
@@ -116,7 +116,7 @@
             <!-- Formulario de Consulta de Trámite -->
             <div id="form-consultar-tramite" class="consultar-tramite oculto">
                 <div class="barra-superior-consultar-tramite">
-                    <h2>Mis <span class="span">Trámites</span></h2>
+                    <h2 class="titulo-seccion">Mis <span class="span">Trámites</span></h2>
                 </div>
                 <div class="tabla">
                     <?php
@@ -126,8 +126,7 @@
                         $sqlTramites = "SELECT * FROM TRAMITES WHERE ID_USUARIO = '$id_usuario';";
 
                         $resultadoTramites = mysqli_query($conn, $sqlTramites);
-                    ?>
-                    
+                    ?>                    
                     <div class="encabezado-tabla">Nro Siniestro</div>
                     <div class="encabezado-tabla">Cliente</div>
                     <div class="encabezado-tabla">Vehículo</div>
@@ -135,9 +134,9 @@
                     <div class="encabezado-tabla">F15</div>
                     <div class="encabezado-tabla">Baja Fiscal</div>
                     <div class="encabezado-tabla">Baja GNC Enargas</div>
-                    <div class="encabezado-tabla">Jurisdicción</div>
-                    <div class="encabezado-tabla">Estado Trámite</div>
-                    <div class="encabezado-tabla">Fecha Trámite</div>
+                    <!-- <div class="encabezado-tabla">Jurisdicción</div> --> <!-- Ocultamos estos 3 campos, porque no nos convence cómo se ven -->
+                    <!-- <div class="encabezado-tabla">Estado Trámite</div> -->
+                    <!-- <div class="encabezado-tabla">Fecha Trámite</div> -->
                     <div class="encabezado-tabla">Importe ($)</div>
                     
 
@@ -149,9 +148,9 @@
                         <div class="registros"> <?php echo $fila['F15']?> </div>
                         <div class="registros"> <?php echo $fila['BAJA_FISCAL']?> </div>
                         <div class="registros"> <?php echo $fila['BAJA_GNC_ENARGAS']?> </div>
-                        <div class="registros"> <?php echo $fila['ID_JURISDICCION']?> </div>
-                        <div class="registros"> <?php echo $fila['ID_ESTADO_TRAMITE']?> </div>
-                        <div class="registros"> <?php echo $fila['FECHA_TRAMITE']?> </div>
+                        <!-- <div class="registros"> <?php echo $fila['ID_JURISDICCION']?> </div> --> <!-- Ocultamos estos 3 campos, porque no nos convence cómo se ven -->
+                        <!-- <div class="registros"> <?php echo $fila['ID_ESTADO_TRAMITE']?> </div> -->
+                        <!-- <div class="registros"> <?php echo $fila['FECHA_TRAMITE']?> </div> -->
                         <div class="registros"> <?php echo $fila['IMPORTE_TRAMITE']?> </div>
                     <?php endwhile; ?>
 
@@ -163,9 +162,9 @@
 
                 <h2>Mis <span class="span">Datos</span></h2>
 
-                <form class="" action="ajustes-cuenta-usuario.php" method="POST">
+                <form class="ajustes-cuenta-usuario-form" action="ajustes-cuenta-usuario.php" method="POST">
                     <label for="">Nombre</label>
-                    <input name="nombre" placeholder="" type="text" autocomplete="off">
+                    <input name="nombre" placeholder="" type="text" autocomplete="off" value="Hola">
 
                     <label for="">Apellido</label>
                     <input name="apellido" placeholder="" type="text" autocomplete="off">
@@ -174,7 +173,7 @@
                     <input name="fechaNacimiento" placeholder="" type="text" autocomplete="off">
 
                     <label for="">mail</label>
-                    <input name="mail" placeholder="" type="text" autocomplete="off">
+                    <input name="mail" placeholder="" type="mail" autocomplete="off">
 
                     <label for="">teléfono</label>
                     <input name="telefono" placeholder="" type="text" autocomplete="off">

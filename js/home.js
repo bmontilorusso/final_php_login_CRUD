@@ -72,6 +72,12 @@ botonNO.addEventListener('click', function() {
     popupCerrarSesion.classList.add('oculto');
 });
 
+// Cerrar Sesión (redireccionamiento a logout.php ):
+
+botonSI.addEventListener('click', function() {
+    window.location.href = 'logout.php';
+})
+
 
 
 
